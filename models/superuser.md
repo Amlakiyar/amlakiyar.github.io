@@ -13,6 +13,20 @@ The SuperUser model represents a user with elevated privileges. SuperUsers have 
     login_date: datetime,
 }
 ```
+## Quick Access
+
+* [`SuperUser._id`](#superuser_id)
+* [`SuperUser.token`](#superusertoken)
+* [`SuperUser.username`](#superuserusername)
+* [`SuperUser.password`](#superuserpassword)
+* [`SuperUser.password_salt`](#superuserpassword_salt)
+* [`SuperUser.join_date`](#superuserjoin_date)
+* [`SuperUser.login_date`](#superuserlogin_date)
+* [`SuperUser.__init__()`](#superuser__init__)
+* [`SuperUser.new()`](#superusernew)
+* [`SuperUser.login()`](#superuserlogin)
+* [`SuperUser.check_login()`](#superusercheck_login)
+* [`SuperUser.logout()`](#superuserlogout)
 
 ## - Fields
 #### `SuperUser._id`
