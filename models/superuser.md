@@ -14,48 +14,44 @@ The SuperUser model represents a user with elevated privileges. SuperUsers have 
 }
 ```
 
-
-------
-## Fields
-### `SuperUser._id`
+## - Fields
+#### `SuperUser._id`
 * Type: ObjectId
 * Description: The unique identifier for the SuperUser.
 
 
-### `SuperUser.token`
+#### `SuperUser.token`
 * Type: string
 * Length: 32 characters
 * Description: A unique authentication token for the SuperUser.
 
-### `SuperUser.username`
+#### `SuperUser.username`
 * Type: string
 * Minimum Length: 6 characters
 * Maximum Length: 32 characters
 * Description: The username for the SuperUser.
 
-### `SuperUser.password`
+#### `SuperUser.password`
 * Type: string
 * Length: 32 characters
 * Description: The hashed password for the SuperUser.
 
-### `SuperUser.password_salt`
+#### `SuperUser.password_salt`
 * Type: string
 * Length: 12 characters
 * Description: A randomly generated salt used to hash the password.
 
-### `SuperUser.join_date`
+#### `SuperUser.join_date`
 * Type: datetime
 * Description: The date and time when the SuperUser account was created.
 
-### `SuperUser.login_date`
+#### `SuperUser.login_date`
 * Type: datetime
 * Description: The date and time when the SuperUser last logged in.
 
-------
+## - Methods
 
-### Methods
-
-### `SuperUser.__init__()`
+#### `SuperUser.__init__()`
 ```python
 # Initialize the SuperUser object
 def __init__(self, _id=None, username=None):
@@ -107,7 +103,7 @@ def __init__(self, _id=None, username=None):
             self.is_loaded = True
 ```
 
-### `SuperUser.new()`
+#### `SuperUser.new()`
 
 ```python
 # Create a new SuperUser
@@ -164,7 +160,7 @@ def new(self, username, password):
     return 0, "New SuperUser created", self
 ```
 
-### `SuperUser.login()`
+#### `SuperUser.login()`
 
 ```python
 # SuperUser Login
@@ -209,7 +205,7 @@ def login(self, password):
     return 0, "Login was successful"
 ```
 
-### `SuperUser.check_login()`
+#### `SuperUser.check_login()`
 
 ```python
 # SuperUser Login Check
@@ -238,7 +234,7 @@ def check_login(self, token):
         return 0, "Token is valid"
 ```
 
-### `SuperUser.logout()`
+#### `SuperUser.logout()`
 
 ```python
 # Logout SuperUser
