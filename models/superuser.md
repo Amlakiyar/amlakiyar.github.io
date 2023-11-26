@@ -2,6 +2,7 @@
 
 # SuperUser
 The SuperUser model represents a user with elevated privileges. SuperUsers have access to administrative features that are not available to regular users.
+
 ```javascript
 {
     _id: ObjectId,
@@ -13,6 +14,7 @@ The SuperUser model represents a user with elevated privileges. SuperUsers have 
     login_date: datetime,
 }
 ```
+
 ## Quick Access
 
 * [`SuperUser._id`](#superuser_id)
@@ -32,7 +34,6 @@ The SuperUser model represents a user with elevated privileges. SuperUsers have 
 #### `SuperUser._id`
 * Type: ObjectId
 * Description: The unique identifier for the SuperUser.
-
 
 #### `SuperUser.token`
 * Type: string
